@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan - Zaki & Anti</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Cinzel Decorative & Lato -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Cover Overlay -->
+    <div id="cover" class="cover-screen">
+        <div class="cover-content">
+            <div class="cover-photo-wrapper">
+                <img src="images/foto-utama.jpg" alt="Zaki & Anti" class="cover-photo">
+            </div>
+            <p class="to-text">The Wedding of</p>
+            <h1 class="cover-names">Zaki &amp; Anti</h1>
+            <p class="cover-date">20.08.2026</p>
+            
+            <!-- Dynamic Guest Name -->
+            <div class="guest-box">
+                <p class="guest-label">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+                <h3 id="guest-name" class="guest-name">Tamu Undangan</h3>
+            </div>
+
+            <button id="open-btn" class="open-btn">
+                <i class="fa-solid fa-envelope-open"></i> Buka Undangan
+            </button>
+        </div>
+    </div>
+
+    <!-- Music Control -->
+    <button id="music-btn" class="music-control-btn">
+        <i id="music-icon" class="fa-solid fa-music"></i>
+    </button>
+    <audio id="bg-music" loop>
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=romantic-wedding-113527.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Main Container -->
+    <div class="container">
+        
+        <!-- Header Section -->
+        <header class="hero-section">
+            <div class="hero-content">
+                <span class="subtitle">Walimatul 'Ursy</span>
+                <h1 class="main-title">Zaki &amp; Anti</h1>
+                <p class="hero-date">Kamis, 20 Agustus 2026</p>
+            </div>
+        </header>
+
+        <!-- Doa / Quotes Section -->
+        <section class="quote-section">
+            <p class="quote-text">
+                "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang."
+            </p>
+            <span class="quote-author">QS. Ar-Rum: 21</span>
+        </section>
+
+        <!-- Mempelai Section -->
+        <section class="couple-section">
+            <div class="couple-card">
+                <div class="catin-photo-wrapper">
+                    <img src="images/foto-coker.jpg" alt="Ahmad Zaki Jauhari" class="catin-photo">
+                </div>
+                <h2 class="bride-name">Ahmad Zaki Jauhari</h2>
+                <p class="nickname">(Coker)</p>
+                <p class="parents">Putra dari Bapak Hj. Komaruddin<br>&amp; Ibu Hj. Ani Fitriah</p>
+            </div>
+
+            <div class="divider">&amp;</div>
+
+            <div class="couple-card">
+                <div class="catin-photo-wrapper">
+                    <img src="images/foto-chi.jpg" alt="Anti Octaviani" class="catin-photo">
+                </div>
+                <h2 class="bride-name">Anti Octaviani</h2>
+                <p class="nickname">(Chi)</p>
+                <p class="parents">Putri dari Bapak Jajang Suryaman<br>&amp; Ibu Iis Rohayati</p>
+            </div>
+        </section>
+
+        <!-- Detail Acara Section -->
+        <section class="event-section">
+            <h2 class="section-title">Rangkaian Acara</h2>
+            
+            <div class="event-box">
+                <div class="event-icon"><i class="fa-solid fa-heart"></i></div>
+                <h3>Akad &amp; Resepsi</h3>
+                <p class="event-date">Kamis, 20 Agustus 2026</p>
+                <p class="event-time">Pukul 10.00 WIB s/d Selesai</p>
+                
+                <hr class="box-divider">
+
+                <div class="location-details">
+                    <i class="fa-solid fa-location-dot location-icon"></i>
+                    <p class="address">
+                        Jl. Subyadinata, Desa Jayaraga,<br>Kec. Tarogong Kidul
+                    </p>
+                    <a href="https://maps.app.goo.gl/GunYjprjqQXKiLpT8" target="_blank" class="maps-btn">
+                        <i class="fa-solid fa-map-location-dot"></i> Lihat Google Maps
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countdown Section -->
+        <section class="countdown-section">
+            <h2 class="section-title">Menghitung Hari</h2>
+            <div id="timer" class="timer-container">
+                <div class="timer-box"><span id="days">00</span><p>Hari</p></div>
+                <div class="timer-box"><span id="hours">00</span><p>Jam</p></div>
+                <div class="timer-box"><span id="minutes">00</span><p>Menit</p></div>
+                <div class="timer-box"><span id="seconds">00</span><p>Detik</p></div>
+            </div>
+        </section>
+
+        <!-- Galeri Momen Bahagia Section -->
+        <section class="gallery-section">
+            <h2 class="section-title">Galeri Momen</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="images/galeri1.jpg" alt="Galeri 1"></div>
+                <div class="gallery-item"><img src="images/galeri2.jpg" alt="Galeri 2"></div>
+                <div class="gallery-item"><img src="images/galeri3.jpg" alt="Galeri 3"></div>
+                <div class="gallery-item"><img src="images/galeri4.jpg" alt="Galeri 4"></div>
+                <div class="gallery-item"><img src="images/galeri5.jpg" alt="Galeri 5"></div>
+                <div class="gallery-item"><img src="images/galeri6.jpg" alt="Galeri 6"></div>
+                <div class="gallery-item"><img src="images/galeri7.jpg" alt="Galeri 7"></div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.</p>
+            <p class="closing">Kami yang berbahagia,</p>
+            <h3 class="footer-names">Zaki &amp; Anti</h3>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
