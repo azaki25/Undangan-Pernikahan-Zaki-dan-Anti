@@ -1,0 +1,437 @@
+/* Global Variables */
+:root {
+    --bg-cream: #faf6f0;
+    --card-cream: #ffffff;
+    --rose-gold: #b76e79;
+    --rose-gold-dark: #914d57;
+    --rose-gold-light: #f4e8e1;
+    --text-dark: #4a4a4a;
+    --text-muted: #777777;
+    
+    /* Font Option: Cinzel Decorative for Headings, Lato for Body */
+    --font-heading: 'Cinzel Decorative', cursive;
+    --font-body: 'Lato', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: #e5dfd9;
+    color: var(--text-dark);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Cover Screen */
+.cover-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(250,246,240,0.95), rgba(244,232,225,0.95));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    text-align: center;
+    overflow-y: auto;
+}
+
+.cover-screen.open {
+    transform: translateY(-100%);
+}
+
+.cover-content {
+    padding: 30px 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.cover-photo-wrapper {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    border: 3px solid var(--rose-gold);
+    padding: 4px;
+    background: white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.cover-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.to-text {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--rose-gold-dark);
+}
+
+.cover-names {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--rose-gold-dark);
+    margin: 15px 0;
+    font-weight: 700;
+}
+
+.cover-date {
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Dynamic Guest Name */
+.guest-box {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 12px 15px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: 1px solid var(--rose-gold-light);
+}
+
+.guest-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.guest-name {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--rose-gold-dark);
+    margin-top: 5px;
+    font-weight: 700;
+}
+
+.open-btn {
+    padding: 12px 28px;
+    background-color: var(--rose-gold);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(183, 110, 121, 0.3);
+    transition: all 0.3s ease;
+}
+
+.open-btn:hover {
+    background-color: var(--rose-gold-dark);
+    transform: translateY(-2px);
+}
+
+/* Music Control */
+.music-control-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--rose-gold);
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    max-width: 450px;
+    background-color: var(--bg-cream);
+    box-shadow: 0 0 25px rgba(0,0,0,0.08);
+    min-height: 100vh;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 70px 20px 40px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--rose-gold-light) 0%, var(--bg-cream) 100%);
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--rose-gold);
+}
+
+.main-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--rose-gold-dark);
+    margin: 12px 0;
+    font-weight: 700;
+}
+
+.hero-date {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+/* Quote Section */
+.quote-section {
+    padding: 30px 25px;
+    text-align: center;
+    font-style: italic;
+    color: var(--text-dark);
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+
+.quote-author {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--rose-gold);
+}
+
+/* Mempelai Section */
+.couple-section {
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.couple-card {
+    background: var(--card-cream);
+    padding: 25px 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(183, 110, 121, 0.15);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+
+.catin-photo-wrapper {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    border: 2px solid var(--rose-gold);
+    padding: 3px;
+    background: white;
+}
+
+.catin-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.bride-name {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--rose-gold-dark);
+    font-weight: 700;
+}
+
+.nickname {
+    font-size: 0.85rem;
+    color: var(--rose-gold);
+    margin-bottom: 8px;
+}
+
+.parents {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.divider {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--rose-gold);
+    margin: 15px 0;
+}
+
+/* Event Section */
+.event-section {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--rose-gold-dark);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.event-box {
+    background: var(--card-cream);
+    padding: 30px 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(183, 110, 121, 0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+}
+
+.event-icon {
+    font-size: 1.8rem;
+    color: var(--rose-gold);
+    margin-bottom: 10px;
+}
+
+.event-box h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--rose-gold-dark);
+    font-weight: 700;
+}
+
+.event-date {
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.event-time {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 3px;
+}
+
+.box-divider {
+    border: 0;
+    height: 1px;
+    background: var(--rose-gold-light);
+    margin: 20px auto;
+    width: 60%;
+}
+
+.location-icon {
+    color: var(--rose-gold);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.address {
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+.maps-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: var(--rose-gold-dark);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    transition: background 0.3s;
+}
+
+.maps-btn:hover {
+    background: var(--rose-gold);
+}
+
+/* Countdown Section */
+.countdown-section {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.timer-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.timer-box {
+    background: var(--card-cream);
+    padding: 12px 10px;
+    border-radius: 10px;
+    min-width: 65px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    border: 1px solid var(--rose-gold-light);
+}
+
+.timer-box span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--rose-gold-dark);
+}
+
+.timer-box p {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 140px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 2px solid white;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    padding: 40px 20px;
+    text-align: center;
+    background: var(--rose-gold-light);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.closing {
+    margin-top: 20px;
+}
+
+.footer-names {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--rose-gold-dark);
+    margin-top: 5px;
+    font-weight: 700;
+}
